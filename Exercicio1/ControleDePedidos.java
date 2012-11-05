@@ -29,7 +29,13 @@ public class ControleDePedidos implements InterfaceSistemaDeControle{
 	
 	
 	public void removePedido(long numPedido) {
-		pedidos.remove(numPedido);
+		for(Pedido pd: pedidos){
+			if(pd.getNumeroDoPedido()== numPedido){
+				pedidos.remove(numPedido);
+
+			}
+		}
+		
 		
 	}
 	
