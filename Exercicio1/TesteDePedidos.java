@@ -1,4 +1,4 @@
-package POO;
+
 
 public class TesteDePedidos {
 	public  static void main(String []args){
