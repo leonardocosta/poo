@@ -1,5 +1,4 @@
 
-
 import java.util.Scanner;
 
 public class ProgramaPrincipal {
@@ -14,28 +13,30 @@ public class ProgramaPrincipal {
 		
 		
 		do{
-			System.out.println("Digite o código do Produto: ");
+			System.out.println("Digite o cï¿½digo do Produto: ");
 			String codigo = teclado.next();
 						
 			System.out.println("Quantidade de item: ");
 			int quantidade = teclado.nextInt();
 					
-			System.out.println("Valor o unitário do ítem: ");
+			System.out.println("Valor o unitï¿½rio do ï¿½tem: ");
 			double valor = teclado.nextDouble();
 			
 			item = new ItemDePedido (codigo, quantidade, valor );
+			pedido.adicionaItem(item);
 			
 			if(codigo.equals("0")){
 				continua=0;
 			}
 			
-			valorTotal+=valor;
+			
 			
 		
 	}while(continua==1);
 						
 		
-		System.out.println(valorTotal);
+		System.out.println(pedido.getValorTotal());
+		
 		
 						
 			
