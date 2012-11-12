@@ -1,6 +1,7 @@
 package br.ufpb.sistemapedidos;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class ProgramaPrincipal {
 	public static void main(String [] args){
@@ -10,43 +11,43 @@ public class ProgramaPrincipal {
 		ItemDePedido item;
 		
 		int continua=1;
-		double valorTotal=0;
+		String codigo = null;
 		
-		
+	
 		do{
-			System.out.println("Digite o cÛdigo do Produto: ");
-			String codigo = teclado.next();
+			try{
+				System.out.println("Digite o c√≥digo do Produto: ");
+				codigo = teclado.next();
+							
+				System.out.println("Quantidade de item: ");
+				String quantidade = teclado.next();
 						
-			System.out.println("Quantidade de item: ");
-			int quantidade = teclado.nextInt();
+				System.out.println("Valor o unit√°rio do √≠tem: ");
+				String valor = teclado.next();
+				
+				item = new ItemDePedido (codigo,Integer.parseInt(quantidade),Integer.parseInt(valor));
+				pedido.adicionaItem(item);
+				
+				if(codigo.equals("0")){
+					continua=0;
+				}
 					
-			System.out.println("Valor o unit·rio do Ìtem: ");
-			double valor = teclado.nextDouble();
+			}catch(NumberFormatException erro){
+				System.out.println("valor inv√°lido, Digite novamente: ");
+				System.out.println("");
+				}
 			
-			item = new ItemDePedido (codigo, quantidade, valor );
-			pedido.adicionaItem(item);
-			
-			if(codigo.equals("0")){
-				continua=0;
-			}
-			
-			
-			
-		
-	}while(continua==1);
+				
+				
+		}while(continua==1);
 						
 		
-		System.out.println(pedido.getValorTotal());
+		System.out.println("valor √©: R$ "+ pedido.getValorTotal());
 		
 						
 			
 			
-		}
-		
-		
-		
-		
-		
 		
 	}
 
+}
