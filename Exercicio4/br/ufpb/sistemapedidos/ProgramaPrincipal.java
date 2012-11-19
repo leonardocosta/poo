@@ -10,7 +10,7 @@ public class ProgramaPrincipal {
 		Pedido pedido = new Pedido(01);
 		ItemDePedido item;
 		
-		int continua=1;
+		boolean continua=false;
 		String codigo = null;
 		
 	
@@ -29,7 +29,7 @@ public class ProgramaPrincipal {
 				pedido.adicionaItem(item);
 				
 				if(codigo.equals("0")){
-					continua=0;
+					continua=true;
 				}
 					
 			}catch(NumberFormatException erro){
@@ -39,7 +39,7 @@ public class ProgramaPrincipal {
 			
 				
 				
-		}while(continua==1);
+		}while(continua!=true);
 						
 		
 		System.out.println("valor é: R$ "+ pedido.getValorTotal());
