@@ -1,6 +1,6 @@
 package Exercicio6;
-
-public class Cliente {
+import java.io.Serializable;
+public class Pedido implements Serializable {
 	
 	private String nome;
 	
