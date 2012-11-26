@@ -1,9 +1,9 @@
 package Exercicio6;
 import java.util.*;
+import java.io.Serializable;
 
 
-
-public class Pedido{
+public class Pedido implements Serializable{
 	
 	private long numeroDoPedido;
 	private Cliente cliente;
@@ -48,6 +48,6 @@ public class Pedido{
 	}
 	
 	public String toString(){
-		return "Cliente: " + this.cliente.getNome() + "\n Número do pedido: " + this.numeroDoPedido + "\n valor : " + this.itens.toString();
+		return "Cliente: " + this.cliente.getNome() + "\n Nï¿½mero do pedido: " + this.numeroDoPedido + "\n valor : " + this.itens.toString();
 	}
 }
