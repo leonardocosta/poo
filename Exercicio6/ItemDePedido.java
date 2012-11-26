@@ -1,6 +1,7 @@
 package Exercicio6;
+import java.io.Serializable;
 
-public class ItemDePedido {
+public class ItemDePedido implements Serializable  {
 	
 	private int quantidade;
 	private long codProduto;
