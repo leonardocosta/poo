@@ -1,10 +1,6 @@
 package Exercicio7;
 
 import java.io.IOException;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
@@ -31,7 +27,7 @@ public class ProgramaPrincipal {
 				continua=true;
 			}
 			else{
-				JOptionPane.showMessageDialog(null,"não escolheu nenhuma agenda...");
+				JOptionPane.showMessageDialog(null,"nï¿½o escolheu nenhuma agenda...");
 			}
 			
 					
