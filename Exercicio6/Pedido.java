@@ -1,9 +1,9 @@
 package Exercicio6;
 import java.util.*;
+import java.io.Serializable;
 
 
-
-public class Pedido{
+public class Pedido implements Serializable{
 	
 	private long numeroDoPedido;
 	private Cliente cliente;
