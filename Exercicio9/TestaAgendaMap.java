@@ -36,7 +36,7 @@ public class TestaAgendaMap {
 			assertEquals("8945",c.getTelefone());
 		
 		}catch(ContatoInexistenteException e){
-			fail("não deveria falhar");
+			fail("nï¿½o deveria falhar");
 		}
 		
 	}
@@ -49,13 +49,13 @@ public class TestaAgendaMap {
 		assertEquals("8945", c.getTelefone());
 		agenda.remove("marto");
 		}catch(ContatoInexistenteException e){
-			fail("não era para dá erro");
+			fail("nï¿½o era para dï¿½ erro");
 			
 		}
-		// contato não existente
+		// contato nï¿½o existente
 		try{
 			agenda.remove("lucas");
-			fail("era para dá erro");
+			fail("era para dï¿½ erro");
 			}catch(ContatoInexistenteException e){
 				
 			}
@@ -81,7 +81,10 @@ public class TestaAgendaMap {
 		agenda.adiciona("marto","8945");
 		
 		Iterator<Contato> contatosProcurados = agenda.getContatosOrdenados();
-		assertTrue(contatosProcurados.hasNext());
+		assertEquals("lucas",contatosProcurados.next().getNome());
+		assertEquals("marilia",contatosProcurados.next().getNome());
+		assertEquals("marto",contatosProcurados.next().getNome());
+
 		
 	}
 }
