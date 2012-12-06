@@ -93,8 +93,8 @@ public class TestaAgenda {
 		
 		Iterator<Contato> contatosAchados = agenda.getContatosOrdenados();
 		assertEquals("ana",contatosAchados.next().getNome());
-		assertEquals("lucas",contatosAchados.next().getNome());
 		assertEquals("gil",contatosAchados.next().getNome());
+		assertEquals("lucas",contatosAchados.next().getNome());
 		
 		
 		
