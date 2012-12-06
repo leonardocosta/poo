@@ -57,13 +57,13 @@ public class TestaAgenda {
 			assertEquals("8111", c.getTelefone());
 			agenda.remove("lucas");
 		} catch (ContatoInexistenteException e) {
-			fail("não deveria falhar");
+			fail("nï¿½o deveria falhar");
 		}
 		
-		//testando contato  não existente
+		//testando contato  nï¿½o existente
 		try {
 			agenda.remove("saulo");
-			fail("deveria lançar exceção");
+			fail("deveria lanï¿½ar exceï¿½ï¿½o");
 		} catch (ContatoInexistenteException e) {
 			
 		}			
@@ -92,7 +92,10 @@ public class TestaAgenda {
 		agenda.adiciona("ana", "9767");
 		
 		Iterator<Contato> contatosAchados = agenda.getContatosOrdenados();
-		assertTrue(contatosAchados.hasNext());
+		assertEquals("ana",contatosAchados.next().getNome());
+		assertEquals("lucas",contatosAchados.next().getNome());
+		assertEquals("gil",contatosAchados.next().getNome());
+		
 		
 		
 	}
